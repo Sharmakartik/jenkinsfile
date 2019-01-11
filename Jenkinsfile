@@ -16,17 +16,19 @@ pipeline {
                 echo " deploy"
             }
         }
-        parallel {
-                stage('windows') {
-                    steps {
+        stage('Run Tests'){
+                 parallel {
+                      stage('windows') {
+                         steps {
                         echo "windows parallel"
-                    }
-                }
-               stage('linux') {
-                    steps {
-                        echo "linux parallel"
-                    }
-                }
+                          }
+                        }
+                     stage('linux') {
+                         steps {
+                             echo "linux parallel"
+                             }
+                           }
+                      }
         }
     }
 }

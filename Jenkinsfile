@@ -16,5 +16,17 @@ pipeline {
                 echo " deploy"
             }
         }
+        parallel {
+                stage('windows') {
+                    steps {
+                        echo "windows parallel"
+                    }
+                }
+               stage('linux') {
+                    steps {
+                        echo "linux parallel"
+                    }
+                }
+        }
     }
 }

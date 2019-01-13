@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo " build
+                echo " build"
             }
         }
         stage('Test') { 
@@ -20,7 +20,7 @@ pipeline {
                  parallel {
                       stage('windows') {
                          steps {
-                        echo "windows parallel"
+                        echo "windows parallel" 
                           }
                         }
                      stage('linux') {

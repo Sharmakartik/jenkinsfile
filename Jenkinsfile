@@ -63,6 +63,7 @@ pipeline {
 
                 echo "Password: ${params.PASSWORD}"
             }
+        } 
         stage('Run Tests'){
                  parallel {
                       stage('windows') {

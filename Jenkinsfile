@@ -4,7 +4,7 @@ pipeline {
         CC = 'kartik'
     }
     options {
-        timeout(time: 30, unit: 'SECONDS') 
+        timeout(time: 1000, unit: 'SECONDS') 
     }
     stages {
         stage('Build') { 
@@ -33,7 +33,7 @@ pipeline {
                   CC = 'kartik-env-per-stage'
                 }
             options {
-                timeout(time: 1, unit: 'SECONDS') 
+                timeout(time: 100, unit: 'SECONDS') 
             }
             steps{
                 echo "hi from entier pipeline ${CC}"  

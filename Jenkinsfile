@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment { 
+        CC = 'kartik'
+    }
     stages {
         stage('Build') { 
             steps {
@@ -16,6 +19,21 @@ pipeline {
                 echo " deploy"
             }
         }
+        stage('ENV'){
+            steps{
+                echo "hi from entier pipeline ${CC}"  
+              
+                }
+              }
+        stage('ENV--per-stage'){
+            environment { 
+                  CC = 'kartik-env-per-stage'
+                }
+            steps{
+                echo "hi from entier pipeline ${CC}"  
+              
+                }
+              }
         stage('Run Tests'){
                  parallel {
                       stage('windows') {

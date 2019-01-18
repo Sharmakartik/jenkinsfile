@@ -1,7 +1,7 @@
 pipeline {
     agent any
      triggers {
-        cron('* * * * *')
+        cron('H */4 * * 1-2')
     }
     environment { 
         CC = 'kartik'

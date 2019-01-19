@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Deploy') { 
             when {
-                branch 'kk'
+                branch 'master'
             }
             input {
                 message "Should we continue?"

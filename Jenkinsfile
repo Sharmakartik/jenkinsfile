@@ -38,10 +38,10 @@ pipeline {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
-               // submitter "kartik"
-               // parameters {
-               //     string(name: 'PERSON', defaultValue: 'kartik', description: 'Who should I say hello to?')
-               // }
+                submitter "kartik"
+                parameters {
+                    string(name: 'kartik', defaultValue: 'kartik', description: 'Who should I say hello to?')
+                }
               }  
             steps {
                 echo " deploy"

@@ -39,6 +39,7 @@ pipeline {
                 parameters {
                     string(name: 'PERSON', defaultValue: 'kartik', description: 'Who should I say hello to?')
                 }
+              }  
             steps {
                 echo " deploy"
             }

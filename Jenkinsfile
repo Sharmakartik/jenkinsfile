@@ -28,7 +28,11 @@ pipeline {
         }
         stage('Test') { 
             steps {
+               script {
+                bat 'mvn -version'  
                 echo " Test"
+                   echo "using script block in steps{...}"   
+               }
             }
         }
         stage('Deploy') { 

@@ -50,7 +50,7 @@ pipeline {
         stage('ENV'){
             steps{
                 when{branch 'master'
-                     input{message "Should we continue?"
+                     input{ message "Should we continue?"
                             ok "Yes, we should."}
                     }
                 echo "hi from entier pipeline ${CC}"  

@@ -32,6 +32,9 @@ pipeline {
             }
         }
         stage('Deploy') { 
+            when {
+                branch 'kk'
+            }
             input {
                 message "Should we continue?"
                 ok "Yes, we should."

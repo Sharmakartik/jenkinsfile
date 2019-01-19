@@ -27,6 +27,9 @@ pipeline {
             }
         }
         stage('Test') { 
+            tools {
+                maven 'maven' 
+               }
             steps {
                script {
                 bat 'mvn -version'  

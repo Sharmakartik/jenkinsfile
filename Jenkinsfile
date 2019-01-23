@@ -98,14 +98,6 @@ pipeline {
               }
             }
           }
-         
-        stage('shared-library-pipeline') {
-           steps {
-             script { 
-                 evenOrOdd(currentBuild.getNumber())
-              }
-            }
-          }
         stage('Run Tests'){
                  parallel {
                       stage('windows') {

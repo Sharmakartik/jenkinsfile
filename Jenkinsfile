@@ -98,13 +98,7 @@ pipeline {
               }
             }
           }
-        stage('shared-library-pipeline-inside-groovy') {
-           steps {
-             script { 
-                 evenOrOdd(${env.BUILD_NUMBER})
-              }
-            }
-          }
+        
         stage('Run Tests'){
                  parallel {
                       stage('windows') {

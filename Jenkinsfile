@@ -101,7 +101,7 @@ pipeline {
         stage('shared-library-pipeline-inside-groovy') {
            steps {
              script { 
-                 evenOrOdd(currentBuild.getNumber())
+                 evenOrOdd(${env.BUILD_NUMBER})
               }
             }
           }

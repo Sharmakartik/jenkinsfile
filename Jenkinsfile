@@ -88,8 +88,8 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         } 
-        stage ('shared-library') {
-        steps {
+        stage('shared-library') {
+           steps {
              script { 
                  log.info 'Starting'
                  log.warning 'Nothing to do!'

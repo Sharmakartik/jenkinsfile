@@ -1,5 +1,8 @@
+ @Library('kartiklibrary') _
+
 pipeline {
     agent any
+
      triggers {
         cron('H */4 * * 1-2')
     }
@@ -85,6 +88,14 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         } 
+        stage ('shared-library') {
+        steps {
+             script { 
+                 log.info 'Starting'
+                 log.warning 'Nothing to do!'
+              }
+            }
+          }
         stage('Run Tests'){
                  parallel {
                       stage('windows') {

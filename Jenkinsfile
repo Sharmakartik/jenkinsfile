@@ -1,7 +1,10 @@
-@Library('kartiklibrary') _
+
 
 pipeline {
     agent any
+     libraries {
+            lib('kartiklibrary@master')
+         }
 
      triggers {
         cron('H */4 * * 1-2')

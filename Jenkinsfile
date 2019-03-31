@@ -1,4 +1,4 @@
-// @Library('kartiklibrary') _
+@Library('kartiklibrary') _
 
 pipeline {
     agent any
@@ -88,7 +88,7 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         } 
-     /*   stage('shared-library') {
+       stage('shared-library') {
            steps {
              script { 
                  log.info 'Starting'
@@ -97,7 +97,7 @@ pipeline {
                  sayHello()
               }
             }
-          }*/
+          }
         stage('Run Tests'){
                  parallel {
                       stage('windows') {

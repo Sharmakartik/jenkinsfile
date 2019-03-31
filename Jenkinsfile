@@ -95,6 +95,7 @@ pipeline {
                  log.warning 'Nothing to do!'
                  sayHello 'Joe'
                  sayHello()
+                 evenOrOdd(currentBuild.getNumber())
               }
             }
           }

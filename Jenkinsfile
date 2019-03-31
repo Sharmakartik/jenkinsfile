@@ -1,4 +1,4 @@
-@Library('kartiklibrary') _
+@Library('kartiklibrary@$BRANCH_NAME') _
 
 pipeline {
     agent any

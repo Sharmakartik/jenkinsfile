@@ -1,7 +1,10 @@
 @Library('kartiklibrary') _
 
 pipeline {
-    agent any
+    agent { label 'window' }
+    tools {
+        maven 'maven'
+    }
      triggers {
         cron('H */4 * * 1-2')
     }

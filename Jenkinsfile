@@ -1,5 +1,6 @@
 @Library('kartiklibrary') _
 World w= new World()
+def utils = new Utilities(this)
     
 pipeline {
     agent { label 'window' }
@@ -98,7 +99,7 @@ pipeline {
                  log.info 'Starting'
                  def a= w.hello()
                  println(a)
-                 sayHello()
+                 utils.mvn '-version'
                 
               }
             }

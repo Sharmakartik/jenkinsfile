@@ -1,6 +1,7 @@
 @Library('kartiklibrary') _
 World w= new World()
 def utils = new Utilities(this)
+def h= new Batt(this)
     
 pipeline {
     agent any
@@ -96,10 +97,7 @@ pipeline {
            steps {
                
              script { 
-                 log.info 'Starting'
-                 def a= w.hello()
-                 println(a)
-                 utils.mvn '-version'
+                h.cmmdd()
                 
               }
             }

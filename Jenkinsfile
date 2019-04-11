@@ -93,9 +93,10 @@ pipeline {
         } 
        stage('shared-library') {
            steps {
-               w.hello()
+               
              script { 
                  log.info 'Starting'
+                 w.hello()
                 
               }
             }

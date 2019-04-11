@@ -1,5 +1,5 @@
 @Library('kartiklibrary') _
-def w= new World()
+World w= new World()
     
 pipeline {
     agent { label 'window' }
@@ -96,8 +96,8 @@ pipeline {
                
              script { 
                  log.info 'Starting'
-                 w.hello()
-                 println(w)h
+                 def a= w.hello()
+                 println(a)
                 
               }
             }

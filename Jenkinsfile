@@ -1,7 +1,7 @@
 @Library('kartiklibrary') _
 
 pipeline {
-    agent { label 'window' }
+    agent any
     tools {
         maven 'maven'
     }
@@ -95,8 +95,6 @@ pipeline {
              script { 
                  log.info 'Starting'
                  log.warning 'Nothing to do!'
-                 sayHello 'Joe'
-                 sayHello()
               }
             }
           }

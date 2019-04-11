@@ -97,6 +97,7 @@ pipeline {
              script { 
                  log.info 'Starting'
                  w.hello()
+                 println(w)h
                 
               }
             }

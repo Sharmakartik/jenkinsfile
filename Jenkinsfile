@@ -98,6 +98,7 @@ pipeline {
                  log.info 'Starting'
                  def a= w.hello()
                  println(a)
+                 sayHello()
                 
               }
             }

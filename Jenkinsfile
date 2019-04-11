@@ -1,5 +1,5 @@
 @Library('kartiklibrary') _
-def w= new World(this)
+def w= new World()
     
 pipeline {
     agent { label 'window' }

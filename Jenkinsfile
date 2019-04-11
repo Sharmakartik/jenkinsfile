@@ -1,7 +1,7 @@
 @Library('kartiklibrary') _
 
 pipeline {
-    agent (label 'window')
+    agent { label 'window' }
     tools {
         maven 'maven'
     }

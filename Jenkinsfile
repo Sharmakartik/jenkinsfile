@@ -3,7 +3,7 @@ World w= new World()
 def utils = new Utilities(this)
     
 pipeline {
-    agent { label 'window' }
+    agent any
     tools {
         maven 'maven'
     }

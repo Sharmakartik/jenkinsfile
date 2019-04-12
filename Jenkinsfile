@@ -1,8 +1,5 @@
 @Library('kartiklibrary') _
-World w= new World()
-def utils = new Utilities(this)
-def h= new Batt(this)
-    
+
 pipeline {
     agent any
     tools {
@@ -122,6 +119,7 @@ pipeline {
         always {
             echo 'One way or another, I have finished'
             deleteDir() /* clean up our workspace */
+            //emailnotify(currentBuild.currentResult)
         }
         success {
             echo 'I succeeeded!'

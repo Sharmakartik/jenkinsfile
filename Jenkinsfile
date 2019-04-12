@@ -98,6 +98,7 @@ pipeline {
                
              script { 
                 h.cmmdd()
+                utils.mvn 'clean package'
                 
               }
             }
